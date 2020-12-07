@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<c3p0-config>
+    <named-config name="testc3p0">
+        <!--指定连接池的初始属性-->
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/library?characterEncoding=utf-8&amp;serverTimezone=UTC</property>
+        <property name="user">root</property>
+        <property name="password">172524</property>
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+
+        <!--初始化连接池中的连接数量-->
+        <property name="initialPoolSize">20</property>
+        <!--请求过多时能连接的最大数量-->
+        <property name="maxPoolSize">40</property>
+        <!--一次可以递增的连接数量-->
+        <!--当连接池中剩余两个就开始递增-->
+        <property name="acquireIncrement">10</property>
+        <!--当连接池中到达最低剩余数量时，开始递增-->
+        <property name="minPoolSize">2</property>
+    </named-config>
+</c3p0-config>
